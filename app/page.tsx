@@ -6,8 +6,10 @@ import Sidebar from "@/public/components/sidebar";
 
 // Component Imports
 import IntroductionSection from "@/public/components/introduction/IntroductionSection";
-// Fixed the import path below. Make sure your folder doesn't have a space!
+
 import GettingStartedSection from "@/public/components/Start/getStartedSection";
+
+import HomeGuide from "@/public/components/Home/home-guide";
 
 export default function KentraDocs() {
   const [activeSection, setActiveSection] = useState("Introduction");
@@ -50,16 +52,18 @@ export default function KentraDocs() {
         </div>
 
         {/* Main Content Area - This will now be the ONLY thing that scrolls */}
-        <main className="w-full flex-1 overflow-y-auto p-6 md:p-12 lg:p-16 flex justify-center">
-          <div className="w-full ">
+       <main className="w-full flex-1 overflow-y-auto bg-white">
+  <div className="w-full h-full">
             {/* Dynamic Content Example: Introduction */}
             {activeSection === "Introduction" && <IntroductionSection />}
 
             {/* Dynamic Content Example: Getting Started */}
             {activeSection === "Getting Started" && <GettingStartedSection />}
 
+            {activeSection === "Home" && <HomeGuide />}
+
             {/* Fallback for other sections (Fixed) */}
-            {activeSection !== "Introduction" && activeSection !== "Getting Started" && (
+            {activeSection !== "Introduction" && activeSection !== "Getting Started" && activeSection !== "Home" && (
               <div className="animate-in fade-in duration-300">
                 <h1 className="mb-4 text-3xl font-extrabold tracking-tight md:text-4xl">
                   {activeSection}

@@ -2,27 +2,19 @@ import React, { useState } from "react";
 import Image from "next/image";
 import {
   Layers,
-  Cpu,
   Network,
-  Blocks,
   Waypoints,
   Sparkles,
-  Lightbulb,
   Box,
   Folder,
-  FolderKanban,
   Users,
   Sprout,
-  Video,
-  Bookmark,
-  Shield,
   Brain,
   Activity,
   Link2,
   UserPlus,
   Archive,
   Globe,
-  Lock,
   MessageSquareShare,
   Coins,
   Compass,
@@ -40,7 +32,6 @@ import {
   Megaphone,
   Tags,
   MessageCircle,
-  Film,
   Heart,
   MonitorPlay,
   Search,
@@ -59,6 +50,7 @@ import {
   RotateCcw,
   Sliders,
   Trash2,
+  Bookmark,
 } from "lucide-react";
 
 import ConceptModal from "../Modal";
@@ -107,10 +99,10 @@ export default function IntroductionSection() {
     },
     {
       name: "Project",
-      icon: FileText, // Swapped to FileText since it's a document canvas
+      icon: FileText, 
       description:
         "A dynamic, rich-text document environment where your ideas take shape. Built for focus, Projects serve as your primary canvas for drafting content, utilizing inline AI assistance, and publishing your work.",
-      imageSrc: "/images/project-illustration.png",
+      imageSrc: "/images/Introduction/project.png",
       features: [
         { icon: Type, text: "Advanced rich-text & layout formatting" },
         { icon: Sparkles, text: "Integrated AI writing assistance" },
@@ -280,7 +272,7 @@ export default function IntroductionSection() {
   ];
 
   return (
-    <div className="flex w-full  flex-col items-start gap-16 pb-16 animate-in fade-in duration-300">
+    <div className="flex w-full  flex-col items-start gap-16 pb-16 animate-in fade-in duration-300 p-6 md:p-12 lg:p-16">
       {/* 1. HERO SECTION                            */}
       <div className="flex w-full flex-col items-start gap-6">
         <div className="flex w-fit items-center gap-3 rounded-full bg-[rgba(0,80,203,0.05)] px-4 py-2">
